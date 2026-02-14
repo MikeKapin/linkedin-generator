@@ -1,0 +1,70 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient (LinkedIn blue) -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0077B5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#005885;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="paper" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="spark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect width="512" height="512" rx="115" fill="url(#bg)"/>
+
+  <!-- Document/post paper -->
+  <g transform="translate(140, 120)">
+    <!-- Paper with shadow -->
+    <rect x="8" y="8" width="216" height="280" rx="12" fill="#000000" opacity="0.1"/>
+    <rect x="0" y="0" width="216" height="280" rx="12" fill="url(#paper)"/>
+
+    <!-- Text lines -->
+    <rect x="24" y="32" width="120" height="8" rx="4" fill="#0077B5" opacity="0.8"/>
+    <rect x="24" y="56" width="168" height="6" rx="3" fill="#999999" opacity="0.5"/>
+    <rect x="24" y="72" width="168" height="6" rx="3" fill="#999999" opacity="0.5"/>
+    <rect x="24" y="88" width="140" height="6" rx="3" fill="#999999" opacity="0.5"/>
+
+    <rect x="24" y="120" width="168" height="6" rx="3" fill="#999999" opacity="0.5"/>
+    <rect x="24" y="136" width="168" height="6" rx="3" fill="#999999" opacity="0.5"/>
+    <rect x="24" y="152" width="155" height="6" rx="3" fill="#999999" opacity="0.5"/>
+
+    <rect x="24" y="184" width="168" height="6" rx="3" fill="#999999" opacity="0.5"/>
+    <rect x="24" y="200" width="168" height="6" rx="3" fill="#999999" opacity="0.5"/>
+
+    <!-- Hashtags -->
+    <text x="24" y="245" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#0077B5" opacity="0.6">#HVAC #Tech</text>
+  </g>
+
+  <!-- AI Sparkle/Magic wand -->
+  <g transform="translate(340, 100)">
+    <!-- Wand -->
+    <rect x="0" y="80" width="8" height="100" rx="4" fill="url(#spark)" transform="rotate(-45 4 130)"/>
+
+    <!-- Star sparkles -->
+    <g fill="url(#spark)">
+      <!-- Main star -->
+      <polygon points="30,20 35,35 50,40 35,45 30,60 25,45 10,40 25,35" opacity="0.9"/>
+      <!-- Small stars -->
+      <polygon points="60,50 63,56 69,59 63,62 60,68 57,62 51,59 57,56" opacity="0.8"/>
+      <polygon points="10,70 12,74 16,76 12,78 10,82 8,78 4,76 8,74" opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- LinkedIn "in" logo accent (subtle) -->
+  <g transform="translate(100, 380)" opacity="0.2">
+    <rect width="70" height="70" rx="8" fill="#ffffff"/>
+    <text x="35" y="53" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#0077B5" text-anchor="middle">in</text>
+  </g>
+
+  <!-- Flame icon (trending) -->
+  <g transform="translate(370, 360)" opacity="0.3">
+    <path d="M 25 50 Q 15 35 20 20 Q 22 10 30 5 Q 35 15 35 25 Q 45 20 45 10 Q 50 20 48 30 Q 46 45 35 55 Q 25 60 20 55 Q 15 50 25 50"
+          fill="#FF6B35"/>
+  </g>
+</svg>
