@@ -1,0 +1,12 @@
+{
+  "name": "linkedin-content-generator",
+  "version": "2.0.0",
+  "description": "Smart Draft - LinkedIn Content Generator for Canadian HVAC",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

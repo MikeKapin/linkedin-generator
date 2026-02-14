@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="theme-color" content="#0f1117">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Smart Draft - LinkedIn Content Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div>
+        <h1>🔥 Smart <span>Draft</span></h1>
+        <div class="subtitle">LinkedIn Content Generator — Canadian HVAC</div>
+      </div>
+      <div class="badge">v2.0</div>
+    </header>
+
+    <div class="grid">
+      <!-- Left Panel -->
+      <div>
+        <div class="panel">
+          <h2>📝 Content Type</h2>
+          <div class="type-grid">
+            <button class="type-btn active" data-type="trending">
+              <span class="icon">📰</span>Trending Issue
+            </button>
+            <button class="type-btn" data-type="tips">
+              <span class="icon">🔧</span>Tips &amp; Tricks
+            </button>
+            <button class="type-btn" data-type="uncommon">
+              <span class="icon">🤯</span>Uncommon Problems
+            </button>
+            <button class="type-btn" data-type="code">
+              <span class="icon">📖</span>Code Deep-Dive
+            </button>
+            <button class="type-btn" data-type="career">
+              <span class="icon">🎓</span>Career / Education
+            </button>
+          </div>
+
+          <div class="field">
+            <label for="topicInput">Topic Focus (optional)</label>
+            <input type="text" id="topicInput" placeholder="e.g. venting failures, pressure regulators...">
+          </div>
+
+          <div class="field">
+            <label for="toneSelect">Tone</label>
+            <select id="toneSelect">
+              <option value="expert">Expert &amp; Direct</option>
+              <option value="story">Story-Based</option>
+              <option value="educational">Educational</option>
+              <option value="provocative">Provocative / Hot Take</option>
+            </select>
+          </div>
+
+          <button class="btn btn-primary" id="generateBtn">
+            🚀 Research &amp; Generate
+          </button>
+          <div class="research-status" id="status"></div>
+        </div>
+
+        <div class="panel" style="margin-top:16px">
+          <h2>📁 Saved Drafts</h2>
+          <div class="drafts-list" id="draftsList">
+            <div class="empty-state">No saved drafts yet</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Panel -->
+      <div class="panel output-area">
+        <div class="output-header">
+          <h2>✍️ Generated Post</h2>
+          <span class="char-count" id="charCount">0 / 3000</span>
+        </div>
+
+        <textarea id="postOutput" placeholder="Click 'Research & Generate' to create a LinkedIn post...&#10;&#10;Smart Draft will:&#10;1. Search trending Canadian HVAC topics&#10;2. Pull relevant news and updates&#10;3. Generate a post in Mike's voice&#10;4. Suggest hashtags"></textarea>
+
+        <div class="actions">
+          <button class="btn btn-sm btn-green" id="copyBtn" disabled>📋 Copy</button>
+          <button class="btn btn-sm btn-outline" id="regenBtn" disabled>🔄 Regenerate</button>
+          <button class="btn btn-sm btn-outline" id="saveBtn" disabled>💾 Save Draft</button>
+        </div>
+
+        <div class="sources" id="sourcesPanel" style="display:none">
+          <h3>🔗 Research Sources</h3>
+          <div id="sourcesList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
